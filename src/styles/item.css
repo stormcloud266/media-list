@@ -1,0 +1,29 @@
+.item-row {
+  color: #404B4B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: #B2B7B7;
+  padding: 15px 20px;
+}
+
+.item-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+
+}
+.item-type {
+  /* margin-left: 1px; */
+}
+.item-done {
+  background: #929696;
+  padding: 7px 10px;
+  border-radius: 3px;
+  color: #E4E5E5;
+  transition: background .3s;
+  cursor: pointer;
+}
+.item-done:hover {
+  background: #365656;
+}
