@@ -8,4 +8,6 @@ body {
   font-weight: 100;
   padding: 40px 20px;
   font-family: 'Inconsolata', monospace;
+  box-sizing: border-box;
+  height: 100vh;
 }
