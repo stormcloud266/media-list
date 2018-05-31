@@ -1,5 +1,6 @@
 import React from 'react';
-import { addItem } from '../firebase';
+import { connect } from 'react-redux';
+import { startAddItem } from '../reduxFolder/actions';
 import '../styles/form.css';
 
 class Form extends React.Component {
@@ -16,8 +17,8 @@ class Form extends React.Component {
   }
   onSubmit = (e) => {
     e.preventDefault();
-    addItem(this.state);
-    this.setState({ title: '' })
+    this.props.startAddItem(this.state);
+    this.setState({ title: '' });
   }
 
 
@@ -40,4 +41,8 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+const mapDispatchToProps = (dispatch, props) => ({
+  startAddItem: (item) => dispatch(startAddItem(item))
+})
+
+export default connect(undefined, mapDispatchToProps)(Form);
