@@ -12,6 +12,11 @@ export default (state = [], action) => {
     case 'SET_ITEMS':
       return action.expenses
 
+    case 'LOGIN':
+      return {
+        uuid: action.uuid
+      }
+
     default:
       return state;
   }

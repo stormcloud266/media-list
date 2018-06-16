@@ -54,3 +54,8 @@ export const startSetItems = () => {
     });
   };
 };
+
+export const login = (uuid) => ({
+  type: 'LOGIN',
+  uuid
+});
